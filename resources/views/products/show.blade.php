@@ -10,7 +10,8 @@
             <h1 class="display-6 fw-bold mb-3">{{ $product->name }}</h1>
             <p class="price fs-2 fw-bold mb-4">Rp{{ number_format((float) $product->price, 0, ',', '.') }}</p>
             <h2 class="h5 fw-bold">Tentang produk</h2><p class="text-secondary lh-lg">{{ $product->description }}</p>
-            <div class="spec-panel my-4"><h2 class="h6 fw-bold mb-3">Informasi produk</h2><dl class="row mb-0"><dt class="col-5">Material</dt><dd class="col-7">{{ $product->eco_rating }}/5</dd><dt class="col-5">Data</dt><dd class="col-7">Referensi IKEA Indonesia</dd></dl></div>
+            <div class="spec-panel my-4"><h2 class="h6 fw-bold mb-3">Informasi produk</h2><dl class="row mb-0"><dt class="col-5">Material</dt>
+            <dd class="col-7">{{ $product->eco_rating }}/5</dd><dt class="col-5">Data</dt><dd class="col-7">Referensi IKEA Indonesia</dd></dl></div>
             @if($source = config('catalog_sources.'.$product->name))
             @endif
             <a class="btn btn-success rounded-pill px-4" href="{{ route('products.index') }}">&larr; Kembali ke katalog</a>
